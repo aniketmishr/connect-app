@@ -8,6 +8,12 @@ Connect is an Android app designed to help you effortlessly store and manage you
 - **Detailed Information:** Store various details about your contacts, including name, phone number, email, address, and more.
 - **Notes:** Attach notes to contacts to remember important information or details about them.
 
+## Installation
+
+[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"
+    alt="Get it on GitHub"
+    height="80">](https://github.com/aniketmishr/connect-app/releases/latest)  
+
 ## Tech Stack:
 Connect is an open-source project built using the following technologies:
 
@@ -33,3 +39,6 @@ git clone https://github.com/aniketmishr/connect-app.git
 If you encounter any issues during setup or have any questions about the project, don't hesitate to reach out to us via GitHub issues or email.
 
 Thank you for your interest in Connect! We hope it helps you stay connected with your contacts in a more organized and efficient way. Happy connecting!
+
+## Credits
+App Icons and illustrations by [Freepik](http://www.freepik.com/)
