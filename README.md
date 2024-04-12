@@ -1,6 +1,20 @@
+<div align="center">
+    <img src="./app/src/main/ic_launcher-playstore.png" width="128" height="128" style="display: block; margin: 0 auto"/>
+    <h1>Connect</h1>
+</div>
+
 # Connect - Your Contact Management App
 
 Connect is an Android app designed to help you effortlessly store and manage your contacts, or as we like to call them, connections. With its user-friendly interface and intuitive features, Connect makes it easy to organize your contacts, add detailed information, and attach notes for quick reference.
+
+|                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |
+|:----------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------:|
+|  ![1](https://github.com/aniketmishr/connect-app/assets/151903859/62a431fe-11d0-4b26-99af-6e508893c18e) | ![2](https://github.com/aniketmishr/connect-app/assets/151903859/d098e39e-fbc2-4e89-9dc2-bb6a50aa24ed) |  ![3](https://github.com/aniketmishr/connect-app/assets/151903859/50b86ea4-d857-4e7a-aa7d-275d2233c439) |  ![4](https://github.com/aniketmishr/connect-app/assets/151903859/f5f17d3f-2a8f-4cc2-872d-2ccc70212a1d)              |
+|  ![5](https://github.com/aniketmishr/connect-app/assets/151903859/6015382e-17c4-420d-af2e-1ce563a3fdd5)|  ![6](https://github.com/aniketmishr/connect-app/assets/151903859/d20bf5c3-f953-40c8-919f-e60582b12bf5)| ![7](https://github.com/aniketmishr/connect-app/assets/151903859/6beb1311-4ad3-4f1f-a809-65743dec38e8)  |  ![8](https://github.com/aniketmishr/connect-app/assets/151903859/1df73897-b77a-4f4c-ace4-7f4705598aa7)              |
+
+
+
+
 
 ## Features:
 - **Contact Management:** Create, edit, and delete contacts with ease.
