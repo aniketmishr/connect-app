@@ -552,9 +552,9 @@ fun NavigationDrawerContent(openGmailApp:(String,Context)->Unit,
                 modifier = Modifier.size(36.dp)
             )})
             Spacer(modifier = Modifier.height(5.dp))
-            NavigationDrawerItem(label = { Text(text = "Rate Us")}, selected = false,
+            NavigationDrawerItem(label = { Text(text = "Star Github Repo")}, selected = false,
                 onClick = {
-                          openBrowser(context,"https://github.com")
+                          openBrowser(context,"https://github.com/aniketmishr/connect-app")
             }, icon = { Icon(
                 painter = painterResource(id = R.drawable.star),
                 contentDescription = null,
@@ -563,7 +563,7 @@ fun NavigationDrawerContent(openGmailApp:(String,Context)->Unit,
             Spacer(modifier = Modifier.height(5.dp))
             NavigationDrawerItem(label = { Text(text = "Share App")}, selected = false,
                 onClick = {
-                          shareApp(context, "https://www.github.com")
+                          shareApp(context, "https://github.com/aniketmishr/connect-app?tab=readme-ov-file#installation")
                           }, icon = { Icon(
                 painter = painterResource(id = R.drawable.share),
                 contentDescription = null,
