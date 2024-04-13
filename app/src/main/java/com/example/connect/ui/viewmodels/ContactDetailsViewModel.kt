@@ -56,13 +56,12 @@ class ContactDetailsViewModel(
     fun getContactSocialMediaLinks(contact: Contact): Map<Int, String?> {
         val contact = contact.toContactModel()
         val map = mutableMapOf(
-            R.drawable.instagram to if (contact.instagram == "") null else "https://www.instagram.com/${contact.instagram}",
-            R.drawable.linkedin to if (contact.linkedIn == "") null else contact.linkedIn,
-            R.drawable.facebook to if (contact.facebook == "") null else "https://m.facebook.com/${contact.facebook}",
-            R.drawable.youtube to if (contact.youtube == "" ) null else "https://m.youtube.com/@${contact.youtube}",
+            R.drawable.instagram to if (contact.instagram == "") null else "https://www.instagram.com/${contact.instagram}/",
+            R.drawable.linkedin to if (contact.linkedIn == "") null else "https://www.linkedin.com/in/${contact.linkedIn}/",
+            R.drawable.facebook to if (contact.facebook == "") null else "https://www.facebook.com/${contact.facebook}/",
+            R.drawable.youtube to if (contact.youtube == "" ) null else "https://youtube.com/@${contact.youtube}",
             R.drawable.twitter to if (contact.twitter == "") null else "https://twitter.com/${contact.twitter}",
             R.drawable.github to if (contact.github == "") null else "https://www.github.com/${contact.github}",
-            R.drawable.snapchat to if (contact.snapchat == "") null else "https://www.snapchat.com/add/${contact.snapchat}",
             R.drawable.hyperlink to if (contact.hyperlink == "") null else contact.hyperlink
         )
         return map
