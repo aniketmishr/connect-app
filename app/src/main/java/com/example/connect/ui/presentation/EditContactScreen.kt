@@ -438,32 +438,7 @@ fun ContactEditScreenBody(
                     .clip(RoundedCornerShape(50.dp))
             )
         }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //item12
-        item(key = 12) {
-            TextField(
-                value = _uiState.snapchat,
-                onValueChange = { onContactDetailValueChange(_uiState.copy(snapchat = it)) },
-                leadingIcon = {
-                    Icon(
-                        painter = painterResource(id = R.drawable.snapchat_bw),
-                        contentDescription = null, tint = Color.DarkGray,
-                        modifier = Modifier.size(24.dp, 24.dp)
-                    )
-                },
-                label = {
-                    Text(
-                        text = "Snapchat ID",
-                        color = Color(0, 128, 255),
-                        fontWeight = FontWeight.SemiBold
-                    )
-                },
-                colors = textfieldColor,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(50.dp))
-            )
-        }
+
 
         //item13
         item(key =13) {
