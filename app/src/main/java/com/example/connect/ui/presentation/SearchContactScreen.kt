@@ -171,7 +171,7 @@ private fun ActionsForTopAppBar(
                         updateFilteredContactList()
                                     },
                     modifier = Modifier
-                        .background(Color(204, 204, 204, 255))
+                        .background(Color(230, 237, 240))
                         .padding(top = 7.dp, bottom = 7.dp, start = 20.dp, end = 20.dp),
                     textStyle = TextStyle(background = Color.Transparent,
                         fontSize = 20.sp)
