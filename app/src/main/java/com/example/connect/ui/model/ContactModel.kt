@@ -1,6 +1,5 @@
 package com.example.connect.ui.model
 
-import android.graphics.Bitmap
 import com.example.connect.data.local.Contact
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -14,21 +13,17 @@ data class ContactModel(
     val tag: String = "No Tag",
     val highlight: String = "",
     val mobile: String = "",
-    val work: String = "",
     val email: String = "",
     val dob: String = "",
     val college: String = "",
     val address: String = "",
     val workplace: String ="",
     //social links
-    val snapchat: String ="",
     val linkedIn: String = "",
     val facebook: String = "",
     val youtube: String = "",
     val twitter: String = "",
     val instagram: String = "",
-    val messenger: String = "",
-    val discord: String = "",
     val github: String = "",
     val hyperlink: String = ""
 )
@@ -41,7 +36,6 @@ fun ContactModel.toContact(): Contact = Contact(
     tag = tag , //may be issue arise
     highlight = if (highlight.isBlank()) {null} else {highlight},
     mobile = mobile.toLongOrNull(),
-    work = work.toLongOrNull(),
     email = if (email.isBlank()) {null} else {email},
     dob = if (dob.isBlank()) {null} else {
         stringToDate(dob)
@@ -51,14 +45,11 @@ fun ContactModel.toContact(): Contact = Contact(
     workplace = if (workplace.isBlank()) {null} else {workplace},
     createdDate = Date(), //may be issue arrise
     modifiedDate = null,
-    snapchat = if (snapchat.isBlank()) {null} else {snapchat},
     linkedIn = if (linkedIn.isBlank()) {null} else {linkedIn},
     facebook = if (facebook.isBlank()) {null} else {facebook},
     youtube = if (youtube.isBlank()) {null} else {youtube},
     twitter = if (twitter.isBlank()) {null} else {twitter},
     instagram = if (instagram.isBlank()) {null} else {instagram},
-    messenger = if (messenger.isBlank()) {null} else {messenger},
-    discord = if (discord.isBlank()) {null} else {discord},
     github = if (github.isBlank()) {null} else {github},
     hyperlink = if (hyperlink.isBlank()) {null} else {hyperlink}
 )
@@ -81,20 +72,16 @@ fun Contact.toContactModel() : ContactModel = ContactModel(
     tag = tag?: "No Tag",
     highlight = highlight?: "",
     mobile = mobile?.toString() ?: "",
-    work = work?.toString()?: "",
     email = email?: "",
     dob = if (dob==null) "" else dateToString(dob),
     college = college?: "",
     address = address?: "",
     workplace = workplace?: "",
-    snapchat = snapchat?: "",
     linkedIn = linkedIn?:"",
     facebook = facebook?: "",
     youtube = youtube?: "",
     twitter = twitter?:"",
     instagram =instagram?: "",
-    messenger = messenger?:"",
-    discord = discord?:"",
     github = github?:"",
     hyperlink = hyperlink?: ""
 )

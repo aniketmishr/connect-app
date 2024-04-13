@@ -17,7 +17,7 @@ interface Container {
 
 class AppContainer(context: Context) : Container {
 
-    val databaseInstance by lazy { AppDatabase.getDatabase(context) }
+    private val databaseInstance by lazy { AppDatabase.getDatabase(context) }
     override val contactRepository: ContactRepository = ContactRepositoryImpl(databaseInstance.contactDao())
     override val noteRepository: NoteRepository = NoteRepositoryImpl(databaseInstance.noteDao())
     override val tagsRepository: TagsRepository = TagsRepositoryImpl(databaseInstance.tagsDao())

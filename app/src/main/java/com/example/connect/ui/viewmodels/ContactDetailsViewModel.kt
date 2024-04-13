@@ -2,7 +2,6 @@ package com.example.connect.ui.viewmodels
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.util.Log
 import android.widget.Toast
@@ -22,7 +21,6 @@ import com.example.connect.ui.presentation.EditContactDestination
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.filterNotNull
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
@@ -122,7 +120,6 @@ class ContactDetailsViewModel(
         val map = mapOf(
             "Highlight" to contact.highlight,
             "Mobile Number" to contact.mobile,
-            "Work Number" to contact.work,
             "Email" to contact.email,
             "Date Of Birth" to contact.dob,
             "College" to contact.college,

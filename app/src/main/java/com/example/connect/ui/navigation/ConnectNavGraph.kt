@@ -3,10 +3,6 @@ package com.example.connect.ui.navigation
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.animation.core.EaseInElastic
-import androidx.compose.animation.core.EaseInOutElastic
-import androidx.compose.animation.core.EaseOut
-import androidx.compose.animation.core.EaseOutBounce
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -14,10 +10,7 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavHostController
 import androidx.navigation.NavType
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.connect.ui.presentation.ContactDetailsDestination
 import com.example.connect.ui.presentation.ContactDetailsScreen

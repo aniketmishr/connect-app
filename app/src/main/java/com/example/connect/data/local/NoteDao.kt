@@ -18,6 +18,6 @@ interface NoteDao {
     suspend fun delete(noteId:Int)
     @Query("select * from note where contactId = :contactId order by id desc")
     fun getAllNotes(contactId: Int) : Flow<List<Note>>
-    @Query("select * from note where id = :id") //TODO("relationship b/w entities")
+    @Query("select * from note where id = :id")
     fun getNote(id: Int) : Flow<Note>
 }

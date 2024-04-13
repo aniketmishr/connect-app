@@ -7,7 +7,6 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.example.connect.data.converter.BitmapConverter
 import com.example.connect.data.converter.BooleanConverter
 import com.example.connect.data.converter.DateConverter
 import kotlinx.coroutines.CoroutineScope
@@ -18,7 +17,7 @@ import kotlinx.coroutines.launch
  * Database class with a singleton Instance object.
  */
 @Database(entities = [Contact::class, Note::class, Tags::class], version = 1, exportSchema = false)
-@TypeConverters(DateConverter::class, BitmapConverter::class,BooleanConverter::class)
+@TypeConverters(DateConverter::class,BooleanConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun contactDao(): ContactDao
@@ -44,15 +43,15 @@ abstract class AppDatabase : RoomDatabase() {
                                 Tags(1, "No Tag"),
                                 Tags(2, "Friend"),
                                 Tags(3, "Colleague"),
-                                Tags(4, "Family")
+                                Tags(4, "Family"),
+                                Tags(5, "Classmate"),
+                                Tags(6, "Acquaintance"),
+                                Tags(7, "Neighbor")
                             )
-                            Log.d("MainActivity","Coroutine Started")
                             coroutineScope.launch {
                                 val tagDao = Instance?.tagsDao()
                                 tagDao?.insert(prepopulateData)
-                                Log.d("DB","Coroutine Ended")
                             }
-                            Log.d("MainActivity","Build Started")
 
                         }
                     })

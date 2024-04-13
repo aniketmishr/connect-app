@@ -1,8 +1,5 @@
 package com.example.connect.ui.presentation
 
-import android.os.Build
-import android.util.Log
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -28,7 +25,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -39,7 +35,6 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.connect.ui.AppViewModelProvider
 import com.example.connect.ui.navigation.NavigationDestination
-import com.example.connect.ui.viewmodels.EditContactViewModel
 import com.example.connect.ui.viewmodels.EditNoteUiState
 import com.example.connect.ui.viewmodels.EditNoteViewModel
 import kotlinx.coroutines.launch

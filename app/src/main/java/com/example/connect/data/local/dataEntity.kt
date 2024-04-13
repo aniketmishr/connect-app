@@ -17,7 +17,6 @@ data class Contact (
     val tag: String?,
     val highlight: String?,
     val mobile: Long?,
-    val work: Long?,
     val email: String?,
     val dob: Date?,
     val college: String?,
@@ -26,14 +25,11 @@ data class Contact (
     val createdDate: Date?,
     val modifiedDate: Date?,
     //social links
-    val snapchat: String?,
     val linkedIn: String?,
     val facebook: String?,
     val youtube: String?,
     val twitter: String?,
     val instagram: String?,
-    val messenger: String?,
-    val discord: String?,
     val github: String?,
     val hyperlink: String?
 )
