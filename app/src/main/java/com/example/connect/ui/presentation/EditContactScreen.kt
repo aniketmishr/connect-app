@@ -680,6 +680,10 @@ fun DobDateTextField(
     var datePickerOpenDialog by remember{ mutableStateOf(false) }
     TextField(
         value = _uiState.dob,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(50.dp))
+            .clickable { datePickerOpenDialog = true },
         readOnly = true,
         onValueChange = { },
         trailingIcon = {
@@ -703,17 +707,17 @@ fun DobDateTextField(
                 tint = Color.DarkGray
             )
         },
-        label = { Text(text = "Date of Birth", color = Color(0,128,255), fontWeight = FontWeight.SemiBold )},
+        label = { Text(text = "Date of Birth", color = Color(0,128,255), fontWeight = FontWeight.SemiBold,modifier = Modifier.clickable {
+            datePickerOpenDialog = true
+        } )},
         colors = TextFieldDefaults.textFieldColors(
             containerColor = Color(217,217,217),
             focusedTextColor = Color.DarkGray,
             unfocusedTextColor = Color.DarkGray,
             focusedIndicatorColor = Color.Transparent,
             unfocusedIndicatorColor = Color.Transparent
-        ),
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(50.dp))
+        )
+
     )
 
 
