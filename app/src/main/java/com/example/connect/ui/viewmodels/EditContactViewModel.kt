@@ -109,15 +109,37 @@ class EditContactViewModel(
     }
 
     fun saveImageToInputStorage(context: Context) {
-        val inputStream = contactPhotoUri?.let { context.contentResolver.openInputStream(it) }
-        val fileName = "photo_${System.currentTimeMillis()}.jpg"
-        val outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE)
-        inputStream?.use { input ->
-            outputStream.use { output->
-                input.copyTo(output)
-            }
+        if (editContactUiState.photo == null && contactPhotoUri == null)
+        {
+            updateUiState(editContactUiState.copy(photo = null))
         }
-        updateUiState(editContactUiState.copy(photo = fileName))
+        else if(editContactUiState.photo == null && contactPhotoUri != null)
+        {
+            val inputStream = contactPhotoUri?.let { context.contentResolver.openInputStream(it) }
+            val fileName = "photo_${System.currentTimeMillis()}.jpg"
+            val outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE)
+            inputStream?.use { input ->
+                outputStream.use { output->
+                    input.copyTo(output)
+                }
+            }
+            updateUiState(editContactUiState.copy(photo = fileName))
+        }
+        else if (editContactUiState.photo != null && contactPhotoUri == null)
+        {
+            updateUiState(editContactUiState.copy()) // nothing to save or update in this case
+        }
+        else{
+            val inputStream = contactPhotoUri?.let { context.contentResolver.openInputStream(it) }
+            val fileName = "photo_${System.currentTimeMillis()}.jpg"
+            val outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE)
+            inputStream?.use { input ->
+                outputStream.use { output->
+                    input.copyTo(output)
+                }
+            }
+            updateUiState(editContactUiState.copy(photo = fileName))
+        }
     }
 
 }

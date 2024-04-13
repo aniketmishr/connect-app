@@ -595,57 +595,7 @@ fun ContactEditScreenBody(
             )
         }
 
-        //item18
-        item(key = 18) {
-            TextField(
-                value = _uiState.messenger,
-                onValueChange = { onContactDetailValueChange(_uiState.copy(messenger = it)) },
-                leadingIcon = {
-                    Icon(
-                        painter = painterResource(id = R.drawable.messenger_bw),
-                        contentDescription = null, tint = Color.DarkGray,
-                        modifier = Modifier.size(24.dp, 24.dp)
-                    )
-                },
-                label = {
-                    Text(
-                        text = "Messenger ID",
-                        color = Color(0, 128, 255),
-                        fontWeight = FontWeight.SemiBold
-                    )
-                },
-                colors = textfieldColor,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(50.dp))
-            )
-        }
 
-        //item19
-        item(key = 19) {
-            TextField(
-                value = _uiState.discord,
-                onValueChange = { onContactDetailValueChange(_uiState.copy(discord = it)) },
-                leadingIcon = {
-                    Icon(
-                        painter = painterResource(id = R.drawable.discord_bw),
-                        contentDescription = null, tint = Color.DarkGray,
-                        modifier = Modifier.size(24.dp, 24.dp)
-                    )
-                },
-                label = {
-                    Text(
-                        text = "Discord ID",
-                        color = Color(0, 128, 255),
-                        fontWeight = FontWeight.SemiBold
-                    )
-                },
-                colors = textfieldColor,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(50.dp))
-            )
-        }
 
         //item20
         item(key = 20) {

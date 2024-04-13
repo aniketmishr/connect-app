@@ -390,6 +390,7 @@ fun ProfileView(contact: Contact) {
 
         // name
         Text(text = contact.name,
+            lineHeight = 40.sp,
             fontSize = 30.sp,
             color = Color(52,58,64),
             textAlign = TextAlign.Center,
