@@ -72,6 +72,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -517,6 +518,10 @@ fun NavigationDrawerContent(openGmailApp:(String,Context)->Unit,
                 Text(text = "Connect", fontSize = 24.sp, fontWeight = FontWeight.SemiBold)
                 Text(text = "v1.0", fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
             }
+
+            Text(text = "Check for Updates", fontSize = 16.sp, color = Color(0xFF2699F5),
+                modifier = Modifier.clickable { openBrowser(context, "https://github.com/aniketmishr/connect-app/releases/latest") })
+
             Spacer(modifier = Modifier.height(10.dp))
             Divider(thickness = 2.dp)
             Spacer(modifier = Modifier.height(5.dp))
